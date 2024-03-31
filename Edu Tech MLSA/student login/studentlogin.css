@@ -1,0 +1,155 @@
+ #top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+        #logo {
+            flex-basis: 20%;
+        }
+        #college-name {
+            flex-basis: 60%;
+            text-align: center;
+        }
+        #profile {
+            flex-basis: 20%;
+            text-align: right;
+        }
+
+        #logo img {
+          max-width: 100px; /* Adjust as needed */
+          height: auto; /* Maintain aspect ratio */
+      }
+      #profile img {
+        max-width: 35px; /* Adjust as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+.event-section {
+  text-align: center;
+  margin: 50px auto;
+  width: 80%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition-property: all ease 0.5;
+  transform-origin: 5%;
+}
+
+
+/* Styling for the slides */
+.slide {
+  display: relative;
+}
+
+/* Styling for the buttons */
+.event-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+
+.attendance-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.attendance-section {
+  margin-bottom: 10px;
+}
+
+.attendance-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.attendance-label {
+  flex: 1;
+  font-weight: bold;
+}
+
+.attendance-value {
+  flex: 1;
+}
+
+.attendance-bar {
+  margin-top: 20px;
+}
+
+.bar-label {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.attendance-bar-present,
+.attendance-bar-absent {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.attendance-bar-present {
+  background-color: #4caf50; /* Green */
+}
+
+.attendance-bar-absent {
+  background-color: #f44336; /* Red */
+}
+
+
+
+.main-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.sub-section {
+  text-align: center;
+}
+
+.section-logo {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  margin-bottom: 10px;
+  font-size: 2px;
+}
+
+.circular-button {
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  border-radius: 50%; /* Makes it circular */
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 9999; /* Ensure it appears above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

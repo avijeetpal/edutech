@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login </title>
+    <link rel="stylesheet" href="teacherlogin.css">
+</head>
+<body>
+
+        <div id="top-section">
+            <section id="logo">
+                <img src="miet logo.png" alt="Logo">
+            </section>
+            <section id="college-name">
+                <h1>Meerut Institute Of Engineering And Technology</h1>
+            </section>
+            <section id="profile">
+                <a href="profile.html"><img src="profile logo.jpeg" alt="Profile"></a>
+            </section>
+        </div>
+        <section class="event-section">
+          
+          <div class="slide" id="past-event">
+            <h2>Past Event</h2>
+            <p><strong>Event Name:</strong> Name of the Past Event</p>
+            <p><strong>Date:</strong> Date of the Past Event</p>
+            <p>Description of past event...</p>
+            <button class="event-button">Explore Past Event</button>
+          </div>
+        
+          
+          <div class="slide" id="current-event">
+            <h2>Current Event</h2>
+            <p><strong>Event Name:</strong> Name of the Current Event</p>
+            <p><strong>Date:</strong> Date of the Current Event</p>
+            <p>Description of current event...</p>
+            <button class="event-button">Learn About Current Event</button>
+          </div>
+        
+      
+          <div class="slide" id="future-event">
+            <h2>Future Event</h2>
+            <p><strong>Event Name:</strong> Name of the Future Event</p>
+            <p><strong>Date:</strong> Date of the Future Event</p>
+            <p>Description of future event...</p>
+            <button class="event-button">Prepare for Future Event</button>
+          </div>
+        </section>
+
+        <script src="teacherlogin.js"></script>
+        <section>
+          <h2>Teacher Class:</h2>
+        
+          <section>
+            <h3>Class 10th</h3>
+        
+            <button class="button" onclick="uploadNotes('10th')">
+              <img src="upload_notes_icon.png" alt="Upload Notes" width="20" height="20"> Upload Notes
+            </button>
+        
+            <!-- Add other buttons similarly -->
+          </section>
+        
+          <section>
+            <h3>Class 11th</h3>
+        
+            <button class="button" onclick="uploadNotes('11th')">
+              <img src="upload_notes_icon.png" alt="Upload Notes" width="20" height="20"> Upload Notes
+            </button>
+        
+            <!-- Add other buttons similarly -->
+          </section>
+        
+        </section>
+        
+        <script>
+          function uploadNotes(className) {
+            // Handle upload notes functionality for the specified class
+            console.log("Upload notes for Class " + className);
+          }
+        
+          // Add other JavaScript functions similarly
+        </script>
+</body>
+</html>

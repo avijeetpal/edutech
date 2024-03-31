@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <button class="btn" id="loginTeacherBtn">Login as Teacher</button>
+    <button class="btn" id="loginStudentBtn">Login as Student</button>
+
+    <div id="teacherLogin" style="display: none;">
+      <div class="input-group">
+        <label for="teacherUsername">Username</label>
+        <input type="text" id="teacherUsername" placeholder="Enter your username">
+      </div>
+      <div class="input-group">
+        <label for="teacherPassword">Password</label>
+        <input type="password" id="teacherPassword" placeholder="Enter your password">
+      </div>
+      <button class="btn" id="teacherLoginBtn">Login</button>
+    </div>
+
+    <div id="studentLogin" style="display: none;">
+      <div class="input-group">
+        <label for="studentUsername">Username</label>
+        <input type="text" id="studentUsername" placeholder="Enter your username">
+      </div>
+      <div class="input-group">
+        <label for="studentPassword">Password</label>
+        <input type="password" id="studentPassword" placeholder="Enter your password">
+      </div>
+      <button class="btn" id="studentLoginBtn">Login</button>
+    </div>
+  </div>
+
+  <script>
+    const loginTeacherBtn = document.getElementById('loginTeacherBtn');
+    const loginStudentBtn = document.getElementById('loginStudentBtn');
+    const teacherLogin = document.getElementById('teacherLogin');
+    const studentLogin = document.getElementById('studentLogin');
+
+    loginTeacherBtn.addEventListener('click', () => {
+      teacherLogin.style.display = 'block';
+      studentLogin.style.display = 'none';
+    });
+
+    loginStudentBtn.addEventListener('click', () => {
+      teacherLogin.style.display = 'none';
+      studentLogin.style.display = 'block';
+    });
+
+    document.getElementById('teacherLoginBtn').addEventListener('click', () => {
+      const teacherUsername = document.getElementById('teacherUsername').value;
+      const teacherPassword = document.getElementById('teacherPassword').value;
+      // Perform teacher login actions (you can replace this with your own logic)
+      // For demo, redirect to teacher page
+      if (teacherUsername === "teacher1" && teacherPassword === "teacher1password") {
+        window.location.href = "teacher login/teacherlogin.html";
+      } else {
+        alert("Invalid username or password");
+      }
+    });
+
+    document.getElementById('studentLoginBtn').addEventListener('click', () => {
+      const studentUsername = document.getElementById('studentUsername').value;
+      const studentPassword = document.getElementById('studentPassword').value;
+      // Perform student login actions (you can replace this with your own logic)
+      // For demo, redirect to student page
+      if (studentUsername === "student1" && studentPassword === "student1password") {
+        window.location.href = "student_page.html";
+      } else {
+        alert("Invalid username or password");
+      }
+    });
+  </script>
+</body>
+</html>
+
+

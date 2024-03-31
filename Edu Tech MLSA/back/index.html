@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random OTP Generator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#generateBtn").click(function(){
+                $.ajax({
+                    url: "/generate_otp",
+                    type: "GET",
+                    success: function(response){
+                        $("#otpDisplay").text(response);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Random OTP Generator</h1>
+    <button id="generateBtn">Generate OTP</button>
+    <p>Generated OTP: <span id="otpDisplay"></span></p>
+</body>
+</html>

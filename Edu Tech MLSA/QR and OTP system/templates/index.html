@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <h1>Generate QR Code</h1>
+    <form id="qrForm">
+        <label for="data">Enter Data:</label><br>
+        <input type="text" id="data" name="data"><br>
+        <button type="button" onclick="generateQR()">Generate QR Code</button>
+    </form>
+    <div id="qrContainer"></div>
+
+    <script>
+        function generateQR() {
+            var data = document.getElementById("data").value;
+            fetch('/generate_qr', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({data: data})
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("qrContainer").innerHTML = `
+                    <img src="data:image/png;base64,${data.qr_image}" alt="QR Code">
+                `;
+                openOTPWindow(data.otp);
+            });
+        }
+
+        function openOTPWindow(otp) {
+            var otpWindow = window.open('', '_blank', 'width=300,height=200');
+            otpWindow.document.write(`
+                <h1>Enter OTP</h1>
+                <form id="otpForm">
+                    <label for="otp">OTP:</label><br>
+                    <input type="text" id="otp" name="otp"><br>
+                    <button type="button" onclick="verifyOTP('${otp}')">Verify OTP</button>
+                </form>
+            `);
+        }
+
+        function verifyOTP(expectedOTP) {
+            var enteredOTP = document.getElementById("otp").value;
+            if (enteredOTP === expectedOTP) {
+                alert("OTP Verified Successfully");
+                window.close();
+            } else {
+                alert("Invalid OTP");
+            }
+        }
+    </script>
+</body>
+</html>
+

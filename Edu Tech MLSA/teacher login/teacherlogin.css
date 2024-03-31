@@ -1,0 +1,54 @@
+#top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+#logo {
+    flex-basis: 20%;
+}
+#college-name {
+    flex-basis: 60%;
+    text-align: center;
+}
+#profile {
+    flex-basis: 20%;
+    text-align: right;
+}
+
+.event-section {
+text-align: center;
+margin: 50px auto;
+width: 80%;
+border: 1px solid #ccc;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the slides */
+.slide {
+display: relative;
+}
+
+/* Styling for the buttons */
+.event-button {
+padding: 10px 20px;
+font-size: 16px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-top: 20px;
+}
+
+#logo img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+#profile img {
+  max-width: 35px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
